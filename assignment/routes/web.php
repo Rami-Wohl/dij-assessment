@@ -14,3 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'MessageController@create');
+Route::post('/', 'MessageController@store');
+
+Route::get('/message/{id}', 'MessageController@show');
+Route::post('/message/{id}', 'MessageController@showDecrypted');
+Route::delete('/message/{id}', 'MessageController@destroy');
+
+
